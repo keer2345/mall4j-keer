@@ -15,9 +15,9 @@
         <yami.shop.version>0.0.1-SNAPSHOT</yami.shop.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.plugin.version>3.12.0</maven.compiler.plugin.version>
-        <spring-boot.version>3.2.1</spring-boot.version>
         <java.version>17</java.version>
+        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+        <spring-boot.version>3.2.4</spring-boot.version>
         <guava.version>33.0.0-jre</guava.version>
         <hutool.version>5.8.24</hutool.version>
         <jsoup.version>1.15.3</jsoup.version>
@@ -148,10 +148,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
-        </dependency>
+        <!-- <dependency> -->
+        <!--     <groupId>com.github.xiaoymin</groupId> -->
+        <!--     <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId> -->
+        <!-- </dependency> -->
     </dependencies>
 
     <build>
@@ -175,6 +175,22 @@
                         <enabled>true</enabled>
                     </layers>
                 </configuration>
+            </plugin>
+
+
+            <plugin>
+                <groupId>com.spotify.fmt</groupId>
+                <artifactId>fmt-maven-plugin</artifactId>
+                <version>2.20</version>
+                <!--
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                -->
             </plugin>
         </plugins>
     </build>
